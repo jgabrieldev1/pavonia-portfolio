@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#CCE3E8">
+  <meta name="description" content="Uma mini exposição de estudos conceituais sobre luz, matéria e movimento.">
+  <title>Portfólio | Estudos de imagem e movimento</title>
+  <link rel="preload" href="./public/assets/fonts/gloock/Gloock-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="./public/assets/fonts/bricolage/BricolageGrotesque-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link button button-primary" href="#trabalhos">Pular para os trabalhos</a>
+  <main>
+    <section class="hero" id="entrada" aria-labelledby="hero-title" tabindex="-1">
+      <header class="site-header">
+        <a class="wordmark" href="#entrada" aria-label="Pavonia Audiovisual, início"><img class="client-logo" src="./public/assets/pavonia-logo-rosa.png" alt="Pavonia Audiovisual" width="2000" height="1414"></a>
+        <button class="menu-toggle button button-secondary" aria-expanded="false" aria-controls="main-nav" hidden>Menu <span aria-hidden="true">☰</span></button>
+        <nav id="main-nav" aria-label="Navegação principal">
+          <a class="label" href="#trabalhos">Trabalhos</a>
+          <a class="label" href="#video">Vídeo</a>
+          <a class="label" href="#sobre">Sobre</a>
+        </nav>
+      </header>
+      <h1 id="hero-title" class="hero-title"><span>A imagem</span> <span>pede tempo</span></h1>
+      <p class="hero-intro">Estudos conceituais de luz,<br class="desktop-break"> matéria e movimento.</p>
+      <a class="hero-action button button-primary" href="#trabalhos">Explorar trabalhos <span aria-hidden="true">↗</span></a>
+      <figure class="hero-art" aria-label="Luz em suspensão, estudo conceitual">
+        <img src="./public/assets/study_light_cover.png" width="1024" height="1536" alt="Três lâminas translúcidas recebem luz lateral sobre uma superfície azul." fetchpriority="high">
+        <figcaption><span class="label">Estudo conceitual</span><span class="hero-art-title">Luz em<br>suspensão</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="section gallery container" id="trabalhos" aria-labelledby="gallery-title" tabindex="-1">
+      <header class="section-heading"><p class="label">Estudos conceituais</p><h2 id="gallery-title">Três maneiras de olhar</h2></header>
+      <div class="gallery-grid">
+        <article class="media-card" data-reveal="slide">
+          <img src="./public/assets/study_light_cover.png" width="1024" height="1536" alt="Sobreposições de lâminas transparentes em tons de azul." loading="lazy">
+          <div class="card-caption"><p class="label">Imagem estática</p><h3>Luz em suspensão</h3><p>Lâminas translúcidas atravessadas por luz lateral.</p><a class="button button-secondary" href="#estudo_luz" aria-label="Ver estudo Luz em suspensão">Ver estudo <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="media-card" data-reveal="slide" data-stagger="80">
+          <img src="./public/assets/study_matter_cover.png" width="1024" height="1536" alt="Vincos e sombras em uma folha de papel claro." loading="lazy">
+          <div class="card-caption"><p class="label">Composição</p><h3>Matéria dobrada</h3><p>Papel, vincos e sombras em uma superfície contínua.</p><a class="button button-secondary" href="#estudo_materia" aria-label="Ver estudo Matéria dobrada">Ver estudo <span aria-hidden="true">↗</span></a></div>
+        </article>
+        <article class="media-card" data-reveal="slide" data-stagger="160">
+          <img src="./public/assets/study_interval_poster.png" width="1536" height="1024" alt="Uma sombra atravessa a junção de planos de vidro." loading="lazy">
+          <div class="card-caption"><p class="label">Audiovisual</p><h3>Intervalo</h3><p>Sombras percorrem uma composição de planos translúcidos.</p><a class="button button-secondary" href="#estudo_intervalo" aria-label="Ver estudo Intervalo">Ver estudo <span aria-hidden="true">↗</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="studies container" id="estudos" aria-label="Os estudos em detalhe">
+      <article class="study section" id="estudo_luz" aria-labelledby="light-title" tabindex="-1">
+        <figure class="study-image" data-reveal="media"><img src="./public/assets/study_light_detail.png" width="1024" height="1536" alt="Vista integral das lâminas: bordas finas, transparências e sombras no piso." loading="lazy"></figure>
+        <div class="study-copy"><div><p class="label">Estudo conceitual</p><h2 id="light-title">Luz em<br>suspensão</h2></div><div class="study-description"><p>Lâminas translúcidas recebem luz lateral. As sobreposições deixam o fundo aparecer em diferentes intensidades.</p><a class="button button-secondary" href="#trabalhos">Voltar aos trabalhos <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="study section" id="estudo_materia" aria-labelledby="matter-title" tabindex="-1">
+        <figure class="study-image" data-reveal="media"><img src="./public/assets/study_matter_detail.png" width="1024" height="1536" alt="A folha dobrada por inteiro, com bordas e sombras que revelam seu volume." loading="lazy"></figure>
+        <div class="study-copy"><div><p class="label">Estudo conceitual</p><h2 id="matter-title">Matéria<br>dobrada</h2></div><div class="study-description"><p>Uma folha contínua muda de volume com vincos e sombras. O detalhe aproxima a superfície para revelar suas dobras.</p><a class="button button-secondary" href="#trabalhos">Voltar aos trabalhos <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+      <article class="study section" id="estudo_intervalo" aria-labelledby="interval-title" tabindex="-1">
+        <figure class="study-image" data-reveal="media"><img src="./public/assets/study_interval_detail.png" width="1536" height="1024" alt="Fotograma de Intervalo, com sombra sobre a interseção de superfícies translúcidas." loading="lazy"></figure>
+        <div class="study-copy"><div><p class="label">Estudo conceitual</p><h2 id="interval-title">Intervalo</h2></div><div class="study-description"><p>Sombras atravessam planos translúcidos. A peça acompanha a mudança da imagem ao longo do tempo.</p><a class="button button-primary" href="#video">Assistir ao vídeo <span aria-hidden="true">↗</span></a></div></div>
+      </article>
+    </section>
+
+    <section class="section screening container" id="video" aria-labelledby="video-title" tabindex="-1">
+      <header class="screening-heading"><div><p class="label">Estudo audiovisual</p><h2 id="video-title">Intervalo,<br>em movimento</h2></div><p>Uma sequência de sombras<br>atravessa planos translúcidos.</p></header>
+      <div class="screening-grid">
+        <figure class="media-card film-card">
+          <div class="film-frame"><video id="intervalo_player" width="1536" height="1024" controls playsinline preload="metadata" poster="./public/assets/study_interval_poster.png" aria-label="Intervalo, estudo audiovisual sem áudio" tabindex="0"><source src="./public/assets/study_interval_video.webm" type="video/webm">Seu navegador não reproduz este vídeo. <a href="./public/assets/study_interval_video.webm">Abrir o vídeo Intervalo</a>.</video></div>
+          <figcaption class="card-caption"><div class="film-meta"><span class="label">Intervalo</span><span class="small">Sem áudio</span></div><div class="player-controls" hidden><button class="button button-primary" id="play-toggle" aria-controls="intervalo_player">Assistir ao vídeo <span aria-hidden="true">▷</span></button><label class="seek-label" for="video-seek">Posição do vídeo <span id="video-time">0:00 / 0:08</span></label><input id="video-seek" type="range" min="0" max="8" step="0.05" value="0" aria-label="Posição do vídeo"><button class="button button-secondary" id="fullscreen">Tela cheia <span aria-hidden="true">↗</span></button><p id="playback-status" class="small" role="status">Reprodução sob seu controle.</p></div></figcaption>
+        </figure>
+        <figure class="media-card frame-before" data-reveal="media"><img src="./public/assets/interval_frame_before.png" width="1536" height="1024" alt="Luz aberta na interseção dos planos, antes da passagem da sombra." loading="lazy"><figcaption class="card-caption"><h3>Antes</h3><p>A luz encontra a primeira superfície.</p></figcaption></figure>
+        <figure class="media-card frame-during" data-reveal="media" data-stagger="80"><img src="./public/assets/interval_frame_during.png" width="1536" height="1024" alt="A sombra escurece o centro da composição." loading="lazy"><figcaption class="card-caption"><h3>Durante</h3><p>As sombras se sobrepõem.</p></figcaption></figure>
+        <figure class="media-card frame-after" data-reveal="media" data-stagger="160"><img src="./public/assets/interval_frame_after.png" width="1536" height="1024" alt="As transparências reaparecem depois da passagem da sombra." loading="lazy"><figcaption class="card-caption"><h3>Depois</h3><p>O espaço volta a aparecer.</p></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section about container" id="sobre" aria-labelledby="about-title" tabindex="-1"><div class="about-copy"><h2 id="about-title">Sobre a prática</h2><p>Esta exposição reúne estudos conceituais sobre luz, matéria e movimento. Cada trabalho parte de uma situação simples: uma superfície, uma dobra ou uma sombra.</p><p>As imagens aproximam detalhes que costumam passar depressa. No vídeo, o tempo entra na composição e transforma o que parecia imóvel.</p></div></section>
+
+    <section class="section closing container" id="contato" aria-labelledby="contact-title"><p class="label">Projetos e colaborações</p><div class="closing-copy"><h2 id="contact-title">Uma conversa começa por uma imagem.</h2><p>Para conversar sobre um projeto, escolha o estudo que mais se aproxima da sua ideia.</p><a class="button button-primary" href="#trabalhos">Explorar trabalhos <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="section footer container" id="rodape"><div class="footer-identity"><a class="wordmark" href="#entrada" aria-label="Pavonia Audiovisual, início"><img class="client-logo" src="./public/assets/pavonia-logo-rosa.png" alt="Pavonia Audiovisual" width="2000" height="1414" loading="lazy"></a><p class="small">Estudos conceituais<br>de imagem e movimento.</p></div><nav aria-label="Navegação do rodapé"><p class="label">Explorar</p><a href="#trabalhos">Trabalhos</a><a href="#video">Vídeo</a><a href="#sobre">Sobre</a></nav><div class="footer-return"><a class="button button-secondary" href="#entrada">Voltar ao início <span aria-hidden="true">↑</span></a></div></footer>
+</body>
+</html>

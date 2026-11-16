@@ -1,0 +1,26 @@
+[
+  {
+    "destination": "public/assets/fonts/gloock/Gloock-Regular.ttf",
+    "contentType": "application/octet-stream",
+    "bytes": 98096,
+    "magic": "00010000"
+  },
+  {
+    "destination": "public/assets/fonts/gloock/OFL.txt",
+    "contentType": "text/plain; charset=utf-8",
+    "bytes": 4381,
+    "magic": "436f7079"
+  },
+  {
+    "destination": "public/assets/fonts/bricolage/BricolageGrotesque-Variable.ttf",
+    "contentType": "application/octet-stream",
+    "bytes": 408496,
+    "magic": "00010000"
+  },
+  {
+    "destination": "public/assets/fonts/bricolage/OFL.txt",
+    "contentType": "text/plain; charset=utf-8",
+    "bytes": 4403,
+    "magic": "436f7079"
+  }
+]
