@@ -1,0 +1,34 @@
+:root {
+  /* Pavonia: o rosa do hibisco sobre papel rosado, tinta vinho e o filme em preto e branco */
+  --rosa: #d94c96;          /* a cor do logo: marca, pílula cheia, destaques */
+  --rosa-texto: #b3306f;    /* rosa mais fundo para rótulos pequenos na folha (contraste) */
+  --rosa-claro: #f29bc8;    /* rótulos sobre o filme */
+  --osso: #f6eef1;          /* a folha (seções), a faixa da nav sobre ela */
+  --tinta: #24101b;         /* texto na folha */
+  --tinta-2: #8a6577;       /* rodapé e textos secundários na folha */
+  --luz: #fbf4f7;           /* texto e pílulas sobre o filme */
+  --noite: #12070d;         /* fundo do html, da intro e do reel */
+
+  --sans: 'Geist Variable', 'Geist', system-ui, sans-serif;
+  --mono: 'Geist Mono Variable', 'Geist Mono', ui-monospace, monospace;
+
+  --f-manifesto: clamp(26px, 2.2vw + 10px, 50px);
+  --f-h2: clamp(44px, 3.4vw + 14px, 78px);
+  --f-furo: clamp(24px, 1.2vw + 12px, 34px);
+  --f-linha: clamp(15px, 0.3vw + 13px, 17px);
+  --f-nav: 14px;
+
+  --margem: clamp(16px, 2.8vw, 44px);
+  --topo: clamp(18px, 2.2vw, 30px);
+  --pilula: 40px;
+
+  --entrada: cubic-bezier(.16, 1, .3, 1);
+  --saida: cubic-bezier(.55, 0, .75, .2);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --pilula: 36px;
+    --f-nav: 13px;
+  }
+}

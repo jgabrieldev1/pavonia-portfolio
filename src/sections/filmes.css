@@ -1,0 +1,81 @@
+/* Filmes recentes: dois quadros com película e um furo no meio */
+.filmes { padding: clamp(40px, 8vh, 100px) var(--margem) clamp(120px, 20vh, 220px); }
+
+.filmes__topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+.filmes__grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 1.1vw, 18px);
+  align-items: start;
+}
+
+.filmes__furo {
+  aspect-ratio: 4 / 5;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(36, 8, 22, .3);
+  color: var(--luz);
+}
+.filmes__furo p {
+  max-width: 11em;
+  text-align: center;
+  font-size: var(--f-furo);
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  text-wrap: balance;
+}
+
+.filme__quadro {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  isolation: isolate;
+  background: #14110f;
+}
+.filme__quadro img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.08) saturate(.86) brightness(.97) sepia(.06);
+  transition: transform 1.4s var(--entrada);
+}
+.filme__lavado,
+.filme__vinheta,
+.filme__grao { position: absolute; pointer-events: none; }
+.filme__lavado { inset: 0; background: rgb(30, 24, 20); mix-blend-mode: lighten; }
+.filme__vinheta { inset: 0; background: radial-gradient(closest-corner at 50% 50%, transparent 55%, rgba(0, 0, 0, .45)); }
+.filme__grao {
+  inset: -50%;
+  background: url('/img/grao.png') 0 0 / 160px 160px repeat;
+  opacity: .24;
+  mix-blend-mode: overlay;
+  animation: grao .5s steps(1) infinite;
+}
+
+.filme figcaption { display: grid; gap: 8px; padding-top: 16px; }
+.filme__nome { font-size: var(--f-linha); line-height: 1.3; }
+.filme figcaption .mono { color: var(--rosa-texto); }
+
+@media (hover: hover) {
+  html:not(.is-scrolling) .filme:hover .filme__quadro img { transform: scale(1.035); }
+}
+
+@media (max-width: 720px) {
+  .filmes { padding-top: 72px; }
+  .filmes__topo { flex-direction: column; align-items: flex-start; gap: 28px; margin-bottom: 40px; }
+  .filmes__grade { grid-template-columns: 1fr; gap: 36px; }
+  .filmes__furo { order: -1; aspect-ratio: 4 / 3; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filme__grao { animation: none; }
+}

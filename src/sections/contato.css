@@ -1,0 +1,46 @@
+/* Contato e rodapé: folha lisa e o nome com as letras furadas */
+.contato { padding-top: clamp(110px, 17vh, 170px); }
+
+.contato__topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 0 var(--margem);
+}
+
+.contato__dados {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  font-size: clamp(17px, .5vw + 14px, 21px);
+  line-height: 1.3;
+}
+.contato__dados .pilula { margin-top: 16px; }
+
+/* o SVG é o furo: a sombra pinta o resto da seção; o retângulo de osso só deixa vazar as letras */
+.contato__nome { margin-top: clamp(56px, 8vh, 96px); }
+.contato__svg { width: 100%; height: auto; overflow: visible; }
+.contato__osso { fill: var(--osso); }
+
+
+.rodape {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px var(--margem) clamp(24px, 4vh, 36px);
+  color: var(--tinta-2);
+}
+.rodape__redes { display: flex; gap: 30px; }
+
+@media (max-width: 720px) {
+  .contato { padding-top: 96px; }
+  .contato__topo { flex-direction: column; gap: 40px; }
+  .contato__dados { align-items: flex-start; }
+  .contato__nome { margin-top: 48px; }
+  .rodape { flex-direction: column; gap: 22px; padding-top: 10px; }
+  .rodape__redes { gap: 24px; }
+}

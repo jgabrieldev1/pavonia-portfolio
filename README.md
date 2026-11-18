@@ -1,13 +1,16 @@
 # Pavonia Audiovisual
 
-Portfólio em formato de mini exposição digital.
+Landing page da Pavonia Audiovisual: o filme do set preso atrÃ¡s da pÃ¡gina, uma folha rosada com furos que o revelam, intro com coluna de quadros e o logo animado.
 
-Os três trabalhos apresentados são estudos conceituais ilustrativos, não trabalhos contratados. Imagens e vídeo conceituais acompanham o projeto; licenças das fontes estão em public/assets/fonts.
+- No ar: https://jgabrieldev1.github.io/pavonia-portfolio/
+- Stack: Vite sem framework, Lenis, Geist.
 
-## Desenvolvimento
+```bash
+npm install
+npm run dev     # http://localhost:5173
+npm run build   # gera dist/
+```
 
-Execute npm run dev -- --host 127.0.0.1 --port 5173.
+Cada push na `main` publica no GitHub Pages (`.github/workflows/pages.yml`).
 
-## Verificação
-
-Execute npm run check e npm run build.
+Primeira versÃ£o: o vÃ­deo do fundo, as fotos dos filmes e as miniaturas da intro ainda sÃ£o provisÃ³rios, e os textos entre colchetes esperam os dados da Pavonia. Guia do projeto em `CLAUDE.md`.

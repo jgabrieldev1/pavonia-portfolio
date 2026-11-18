@@ -1,0 +1,50 @@
+/* Estúdio: manifesto e a janela cinemascope */
+.manifesto {
+  --janela: min(980px, 66vw);
+  padding: clamp(120px, 22vh, 220px) 0 clamp(140px, 24vh, 260px);
+}
+
+.manifesto__texto {
+  width: var(--janela);
+  margin: 0 auto;
+  font-size: var(--f-manifesto);
+  font-weight: 330;
+  line-height: 1.14;
+  letter-spacing: -.012em;
+}
+
+.manifesto__grade {
+  display: grid;
+  grid-template-columns: 1fr var(--janela) 1fr;
+  align-items: center;
+  margin-top: clamp(56px, 9vh, 90px);
+}
+
+.janela { aspect-ratio: 2.39 / 1; width: 100%; }
+
+.nota {
+  display: grid;
+  gap: 10px;
+  padding: 0 clamp(20px, 2.5vw, 40px);
+  font-size: var(--f-linha);
+  line-height: 1.4;
+}
+.nota .mono { color: var(--rosa-texto); }
+.nota--esq { text-align: right; justify-self: end; max-width: 15em; }
+.nota--dir { justify-self: start; max-width: 15em; }
+
+@media (max-width: 720px) {
+  .manifesto { --janela: calc(100vw - 2 * var(--margem)); padding: 104px 0 110px; }
+  .manifesto__grade {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'janela janela' 'esq dir';
+    align-items: start;
+    gap: 36px 18px;
+    padding: 0 var(--margem);
+    margin-top: 56px;
+  }
+  .janela { grid-area: janela; aspect-ratio: 16 / 10; }
+  .nota { padding: 0; max-width: none; }
+  .nota--esq { grid-area: esq; text-align: left; justify-self: stretch; }
+  .nota--dir { grid-area: dir; justify-self: stretch; }
+}

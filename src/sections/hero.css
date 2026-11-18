@@ -1,0 +1,130 @@
+/* Hero: só o filme e o logo da Pavonia (flor + nome + AUDIOVISUAL), em rosa.
+   As peças vêm de public/img/marca/ (máscaras brancas recortadas do logo) e pintam com currentColor. */
+.hero {
+  position: relative;
+  height: 100svh;
+  min-height: 480px;
+  display: grid;
+  place-items: center;
+  color: var(--luz);
+}
+
+.hero__centro { position: relative; display: flex; flex-direction: column; align-items: center; }
+
+.hero__marca { margin: 0; line-height: 0; }
+
+/* proporções e posições medidas no logo original (1484 × 1326) */
+.logo {
+  --logo-w: min(62svh, 74vw, 720px);
+  position: relative;
+  display: block;
+  width: var(--logo-w);
+  aspect-ratio: 1484 / 1326;
+  color: var(--rosa);
+  filter: drop-shadow(0 6px 30px rgba(18, 7, 13, .35));
+}
+.logo__flor,
+.logo__nome b {
+  position: absolute;
+  background: currentColor;
+  -webkit-mask: var(--m) 0 0 / 100% 100% no-repeat;
+  mask: var(--m) 0 0 / 100% 100% no-repeat;
+}
+
+.logo__flor {
+  --m: url('/img/marca/flor.png');
+  left: 18.464%;
+  top: 0;
+  width: 66.509%;
+  height: 66.667%;
+  opacity: 0;
+  transform: rotate(-28deg) scale(.7);
+  transform-origin: 50% 52%;
+  transition: transform 1.8s var(--entrada), opacity 1s var(--entrada);
+}
+
+.logo__nome {
+  position: absolute;
+  left: 0;
+  top: 55.656%;
+  width: 100%;
+  height: 38.462%;
+  /* máscara: as letras sobem de baixo da linha */
+  clip-path: inset(-40% -4% 0 -4%);
+}
+.logo__nome b {
+  inset: 0;
+  transform: translate3d(0, 110%, 0);
+  transition: transform 1.3s var(--entrada);
+  transition-delay: calc(.15s + var(--i, 0) * .07s);
+}
+.logo__nome .l1 { --m: url('/img/marca/l1.png'); }
+.logo__nome .l2 { --m: url('/img/marca/l2.png'); }
+.logo__nome .l3 { --m: url('/img/marca/l3.png'); }
+.logo__nome .l4 { --m: url('/img/marca/l4.png'); }
+.logo__nome .l5 { --m: url('/img/marca/l5.png'); }
+.logo__nome .l6 { --m: url('/img/marca/l6.png'); }
+
+.logo__sub {
+  position: absolute;
+  left: 10.647%;
+  top: 95.249%;
+  width: 81.806%;
+  height: 4.751%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: var(--mono);
+  font-size: calc(var(--logo-w) * .058);
+  font-weight: 400;
+  line-height: .72;
+  opacity: 0;
+  transition: opacity 1s var(--entrada) .9s;
+}
+
+html.is-pronto .logo__flor { opacity: 1; transform: none; }
+html.is-pronto .logo__nome b { transform: none; }
+html.is-pronto .logo__sub { opacity: 1; }
+
+.hero__reel {
+  position: absolute;
+  top: 100%;
+  margin-top: 22px;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  padding: 6px 2px;
+  color: var(--luz);
+}
+
+.hero__canto {
+  position: absolute;
+  bottom: clamp(28px, 5vh, 48px);
+  display: grid;
+  gap: 8px;
+  font-size: var(--f-linha);
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s var(--entrada) .7s, transform 1.1s var(--entrada) .7s;
+}
+.hero__canto .mono { color: var(--rosa-claro); }
+.hero__canto--esq { left: var(--margem); }
+.hero__canto--dir { right: var(--margem); text-align: right; }
+html.is-pronto .hero__canto { opacity: 1; transform: none; }
+html.is-pronto .hero__reel { animation: hero-reel 1s var(--entrada) .8s both; }
+
+@keyframes hero-reel { from { opacity: 0; } to { opacity: 1; } }
+
+@media (max-width: 720px) {
+  .logo { --logo-w: min(80vw, 52svh); }
+  .hero__reel { display: inline-flex; }
+  .hero__canto--dir { display: none; }
+  .hero__canto { bottom: 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo__flor, .logo__nome b, .logo__sub { transform: none; transition: none; opacity: 1; }
+  .hero__canto { transform: none; transition: opacity .6s; }
+}

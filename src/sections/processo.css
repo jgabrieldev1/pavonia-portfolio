@@ -1,0 +1,40 @@
+/* Como trabalhamos: sem folha, o filme volta de ponta a ponta */
+.folha > .processo {
+  min-height: 118svh;
+  display: flex;
+  align-items: flex-end;
+  color: var(--luz);
+}
+.processo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 35%, rgba(0, 0, 0, .55));
+  pointer-events: none;
+}
+
+.processo__conteudo {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 0 var(--margem) clamp(64px, 10vh, 96px);
+}
+
+.processo__etapas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: clamp(56px, 9vh, 80px);
+}
+.processo__etapas li { display: grid; gap: 14px; max-width: 24em; }
+.processo__etapas .mono { color: var(--rosa-claro); }
+.processo__etapas li > p:last-child { font-size: var(--f-linha); line-height: 1.5; color: rgba(251, 244, 247, .86); }
+
+/* texto que chega à altura da nav some por marco (.is-sob, posta pelo nav.js) */
+.processo h2 { transition: opacity .3s; }
+.processo h2.is-sob,
+.processo li.entra.is-sob { opacity: 0; transition: opacity .3s, transform 1.1s var(--entrada); }
+
+@media (max-width: 720px) {
+  .processo__etapas { grid-template-columns: 1fr; gap: 26px; margin-top: 44px; }
+}

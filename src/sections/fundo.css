@@ -1,0 +1,64 @@
+/* O filme preso atrás de tudo */
+.fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: var(--noite);
+}
+.fundo__video {
+  position: absolute;
+  left: -1%;
+  top: -1%;
+  width: 102%;
+  height: 102%;
+  object-fit: cover;
+  object-position: 62% 50%;
+  filter: grayscale(1) contrast(1.14) brightness(.9);
+  animation: trepida .9s steps(1) infinite;
+}
+/* um toque do rosa da marca no preto e branco */
+.fundo__tom {
+  position: absolute;
+  inset: 0;
+  background: var(--rosa);
+  mix-blend-mode: soft-light;
+  opacity: .32;
+}
+.fundo__vinheta {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 95% at 55% 45%, transparent 45%, rgba(0, 0, 0, .55)),
+    linear-gradient(to bottom, rgba(0, 0, 0, .28), transparent 26%, transparent 64%, rgba(0, 0, 0, .4));
+}
+.fundo__grao {
+  position: absolute;
+  inset: -50%;
+  background: url('/img/grao.png') 0 0 / 192px 192px repeat;
+  opacity: .16;
+  mix-blend-mode: overlay;
+  animation: grao .5s steps(1) infinite;
+  pointer-events: none;
+}
+
+@keyframes trepida {
+  0%   { transform: translate3d(0, 0, 0); }
+  17%  { transform: translate3d(.4px, -.3px, 0); }
+  33%  { transform: translate3d(-.3px, .5px, 0); }
+  50%  { transform: translate3d(.6px, .2px, 0); }
+  67%  { transform: translate3d(-.5px, -.4px, 0); }
+  83%  { transform: translate3d(.3px, .6px, 0); }
+}
+@keyframes grao {
+  0%   { transform: translate3d(0, 0, 0); }
+  17%  { transform: translate3d(-7%, 4%, 0); }
+  33%  { transform: translate3d(5%, -9%, 0); }
+  50%  { transform: translate3d(-11%, -3%, 0); }
+  67%  { transform: translate3d(9%, 7%, 0); }
+  83%  { transform: translate3d(-3%, 11%, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fundo__video, .fundo__grao { animation: none; }
+}

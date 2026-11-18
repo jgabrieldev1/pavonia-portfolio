@@ -1,0 +1,30 @@
+import '@fontsource-variable/geist/wght.css';
+import '@fontsource-variable/geist-mono/wght.css';
+
+import './styles/tokens.css';
+import './styles/base.css';
+import './sections/carga.css';
+import './sections/fundo.css';
+import './sections/nav.css';
+import './sections/hero.css';
+import './sections/folha.css';
+import './sections/manifesto.css';
+import './sections/filmes.css';
+import './sections/processo.css';
+import './sections/contato.css';
+import './sections/reel.css';
+
+import { carga } from './motion/carga.js';
+import { fundo } from './motion/fundo.js';
+import { nav } from './motion/nav.js';
+import { barra } from './motion/barra.js';
+import { entradas } from './motion/entradas.js';
+import { reel } from './motion/reel.js';
+import { links } from './motion/links.js';
+
+carga(fundo());
+nav();
+barra();
+entradas();
+reel();
+links();

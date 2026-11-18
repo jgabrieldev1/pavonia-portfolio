@@ -1,88 +1,184 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#CCE3E8">
-  <meta name="description" content="Uma mini exposição de estudos conceituais sobre luz, matéria e movimento.">
-  <title>Portfólio | Estudos de imagem e movimento</title>
-  <link rel="preload" href="./public/assets/fonts/gloock/Gloock-Regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="./public/assets/fonts/bricolage/BricolageGrotesque-Variable.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="./styles.css">
-  <script defer src="./app.js"></script>
-</head>
-<body>
-  <a class="skip-link button button-primary" href="#trabalhos">Pular para os trabalhos</a>
-  <main>
-    <section class="hero" id="entrada" aria-labelledby="hero-title" tabindex="-1">
-      <header class="site-header">
-        <a class="wordmark" href="#entrada" aria-label="Pavonia Audiovisual, início"><img class="client-logo" src="./public/assets/pavonia-logo-rosa.png" alt="Pavonia Audiovisual" width="2000" height="1414"></a>
-        <button class="menu-toggle button button-secondary" aria-expanded="false" aria-controls="main-nav" hidden>Menu <span aria-hidden="true">☰</span></button>
-        <nav id="main-nav" aria-label="Navegação principal">
-          <a class="label" href="#trabalhos">Trabalhos</a>
-          <a class="label" href="#video">Vídeo</a>
-          <a class="label" href="#sobre">Sobre</a>
-        </nav>
-      </header>
-      <h1 id="hero-title" class="hero-title"><span>A imagem</span> <span>pede tempo</span></h1>
-      <p class="hero-intro">Estudos conceituais de luz,<br class="desktop-break"> matéria e movimento.</p>
-      <a class="hero-action button button-primary" href="#trabalhos">Explorar trabalhos <span aria-hidden="true">↗</span></a>
-      <figure class="hero-art" aria-label="Luz em suspensão, estudo conceitual">
-        <img src="./public/assets/study_light_cover.png" width="1024" height="1536" alt="Três lâminas translúcidas recebem luz lateral sobre uma superfície azul." fetchpriority="high">
-        <figcaption><span class="label">Estudo conceitual</span><span class="hero-art-title">Luz em<br>suspensão</span></figcaption>
-      </figure>
-    </section>
-
-    <section class="section gallery container" id="trabalhos" aria-labelledby="gallery-title" tabindex="-1">
-      <header class="section-heading"><p class="label">Estudos conceituais</p><h2 id="gallery-title">Três maneiras de olhar</h2></header>
-      <div class="gallery-grid">
-        <article class="media-card" data-reveal="slide">
-          <img src="./public/assets/study_light_cover.png" width="1024" height="1536" alt="Sobreposições de lâminas transparentes em tons de azul." loading="lazy">
-          <div class="card-caption"><p class="label">Imagem estática</p><h3>Luz em suspensão</h3><p>Lâminas translúcidas atravessadas por luz lateral.</p><a class="button button-secondary" href="#estudo_luz" aria-label="Ver estudo Luz em suspensão">Ver estudo <span aria-hidden="true">↗</span></a></div>
-        </article>
-        <article class="media-card" data-reveal="slide" data-stagger="80">
-          <img src="./public/assets/study_matter_cover.png" width="1024" height="1536" alt="Vincos e sombras em uma folha de papel claro." loading="lazy">
-          <div class="card-caption"><p class="label">Composição</p><h3>Matéria dobrada</h3><p>Papel, vincos e sombras em uma superfície contínua.</p><a class="button button-secondary" href="#estudo_materia" aria-label="Ver estudo Matéria dobrada">Ver estudo <span aria-hidden="true">↗</span></a></div>
-        </article>
-        <article class="media-card" data-reveal="slide" data-stagger="160">
-          <img src="./public/assets/study_interval_poster.png" width="1536" height="1024" alt="Uma sombra atravessa a junção de planos de vidro." loading="lazy">
-          <div class="card-caption"><p class="label">Audiovisual</p><h3>Intervalo</h3><p>Sombras percorrem uma composição de planos translúcidos.</p><a class="button button-secondary" href="#estudo_intervalo" aria-label="Ver estudo Intervalo">Ver estudo <span aria-hidden="true">↗</span></a></div>
-        </article>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pavonia Audiovisual</title>
+    <meta name="description" content="Pavonia Audiovisual: produtora de filmes, do roteiro ao corte final." />
+    <meta name="theme-color" content="#12070d" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link rel="preload" as="image" href="/video/montagem.jpg" />
+    <style>html { background: #12070d; }</style>
+  </head>
+  <body>
+    <!-- Intro -->
+    <div class="carga" data-carga aria-hidden="true">
+      <p class="carga__rotulos mono"><span>[ Pavonia Audiovisual ]</span><span>[ <b data-pct>0</b> por cento ]</span></p>
+      <div class="carga__coluna" data-coluna>
+        <img src="/img/intro/q01.webp" alt="" />
+        <img src="/img/intro/q02.webp" alt="" />
+        <img src="/img/intro/filme-carro.webp" alt="" />
+        <img src="/img/intro/q03.webp" alt="" />
+        <img src="/img/intro/q04.webp" alt="" />
+        <img src="/img/intro/q05.webp" alt="" />
+        <img src="/img/intro/q06.webp" alt="" />
+        <img src="/img/intro/q07.webp" alt="" />
+        <img src="/img/intro/filme-clipe.webp" alt="" />
+        <img src="/img/intro/q08.webp" alt="" />
+        <img src="/img/intro/q09.webp" alt="" />
+        <img src="/video/montagem.jpg" class="carga__ultimo" data-ultimo alt="" />
       </div>
-    </section>
+    </div>
 
-    <section class="studies container" id="estudos" aria-label="Os estudos em detalhe">
-      <article class="study section" id="estudo_luz" aria-labelledby="light-title" tabindex="-1">
-        <figure class="study-image" data-reveal="media"><img src="./public/assets/study_light_detail.png" width="1024" height="1536" alt="Vista integral das lâminas: bordas finas, transparências e sombras no piso." loading="lazy"></figure>
-        <div class="study-copy"><div><p class="label">Estudo conceitual</p><h2 id="light-title">Luz em<br>suspensão</h2></div><div class="study-description"><p>Lâminas translúcidas recebem luz lateral. As sobreposições deixam o fundo aparecer em diferentes intensidades.</p><a class="button button-secondary" href="#trabalhos">Voltar aos trabalhos <span aria-hidden="true">↗</span></a></div></div>
-      </article>
-      <article class="study section" id="estudo_materia" aria-labelledby="matter-title" tabindex="-1">
-        <figure class="study-image" data-reveal="media"><img src="./public/assets/study_matter_detail.png" width="1024" height="1536" alt="A folha dobrada por inteiro, com bordas e sombras que revelam seu volume." loading="lazy"></figure>
-        <div class="study-copy"><div><p class="label">Estudo conceitual</p><h2 id="matter-title">Matéria<br>dobrada</h2></div><div class="study-description"><p>Uma folha contínua muda de volume com vincos e sombras. O detalhe aproxima a superfície para revelar suas dobras.</p><a class="button button-secondary" href="#trabalhos">Voltar aos trabalhos <span aria-hidden="true">↗</span></a></div></div>
-      </article>
-      <article class="study section" id="estudo_intervalo" aria-labelledby="interval-title" tabindex="-1">
-        <figure class="study-image" data-reveal="media"><img src="./public/assets/study_interval_detail.png" width="1536" height="1024" alt="Fotograma de Intervalo, com sombra sobre a interseção de superfícies translúcidas." loading="lazy"></figure>
-        <div class="study-copy"><div><p class="label">Estudo conceitual</p><h2 id="interval-title">Intervalo</h2></div><div class="study-description"><p>Sombras atravessam planos translúcidos. A peça acompanha a mudança da imagem ao longo do tempo.</p><a class="button button-primary" href="#video">Assistir ao vídeo <span aria-hidden="true">↗</span></a></div></div>
-      </article>
-    </section>
+    <!-- O filme preso atrás da página (por enquanto o set da demo; será trocado pelo audiovisual da Pavonia) -->
+    <div class="fundo" data-fundo aria-hidden="true">
+      <video class="fundo__video" src="/video/montagem.mp4" poster="/video/montagem.jpg" muted loop playsinline preload="auto"></video>
+      <i class="fundo__tom"></i>
+      <i class="fundo__vinheta"></i>
+      <i class="fundo__grao"></i>
+    </div>
 
-    <section class="section screening container" id="video" aria-labelledby="video-title" tabindex="-1">
-      <header class="screening-heading"><div><p class="label">Estudo audiovisual</p><h2 id="video-title">Intervalo,<br>em movimento</h2></div><p>Uma sequência de sombras<br>atravessa planos translúcidos.</p></header>
-      <div class="screening-grid">
-        <figure class="media-card film-card">
-          <div class="film-frame"><video id="intervalo_player" width="1536" height="1024" controls playsinline preload="metadata" poster="./public/assets/study_interval_poster.png" aria-label="Intervalo, estudo audiovisual sem áudio" tabindex="0"><source src="./public/assets/study_interval_video.webm" type="video/webm">Seu navegador não reproduz este vídeo. <a href="./public/assets/study_interval_video.webm">Abrir o vídeo Intervalo</a>.</video></div>
-          <figcaption class="card-caption"><div class="film-meta"><span class="label">Intervalo</span><span class="small">Sem áudio</span></div><div class="player-controls" hidden><button class="button button-primary" id="play-toggle" aria-controls="intervalo_player">Assistir ao vídeo <span aria-hidden="true">▷</span></button><label class="seek-label" for="video-seek">Posição do vídeo <span id="video-time">0:00 / 0:08</span></label><input id="video-seek" type="range" min="0" max="8" step="0.05" value="0" aria-label="Posição do vídeo"><button class="button button-secondary" id="fullscreen">Tela cheia <span aria-hidden="true">↗</span></button><p id="playback-status" class="small" role="status">Reprodução sob seu controle.</p></div></figcaption>
-        </figure>
-        <figure class="media-card frame-before" data-reveal="media"><img src="./public/assets/interval_frame_before.png" width="1536" height="1024" alt="Luz aberta na interseção dos planos, antes da passagem da sombra." loading="lazy"><figcaption class="card-caption"><h3>Antes</h3><p>A luz encontra a primeira superfície.</p></figcaption></figure>
-        <figure class="media-card frame-during" data-reveal="media" data-stagger="80"><img src="./public/assets/interval_frame_during.png" width="1536" height="1024" alt="A sombra escurece o centro da composição." loading="lazy"><figcaption class="card-caption"><h3>Durante</h3><p>As sombras se sobrepõem.</p></figcaption></figure>
-        <figure class="media-card frame-after" data-reveal="media" data-stagger="160"><img src="./public/assets/interval_frame_after.png" width="1536" height="1024" alt="As transparências reaparecem depois da passagem da sombra." loading="lazy"><figcaption class="card-caption"><h3>Depois</h3><p>O espaço volta a aparecer.</p></figcaption></figure>
+    <div class="barra" data-barra aria-hidden="true"><i></i></div>
+
+    <header class="nav" data-nav>
+      <nav class="nav__links" aria-label="Seções">
+        <a class="link" href="#filmes">Filmes</a>
+        <a class="link" href="#estudio">Estúdio</a>
+        <a class="link" href="#contato">Contato</a>
+      </nav>
+      <a class="nav__marca" href="#topo" aria-label="Pavonia Audiovisual, voltar ao topo"><i></i></a>
+      <div class="nav__acoes">
+        <button class="pilula pilula--contorno nav__reel" type="button" data-abre-reel>
+          <svg class="play" viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" /></svg>Ver o reel
+        </button>
+        <a class="pilula pilula--cheia" href="#contato">
+          Pedir orçamento<svg class="seta" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11.5M9 3.5 13.5 8 9 12.5" /></svg>
+        </a>
       </div>
-    </section>
+    </header>
 
-    <section class="section about container" id="sobre" aria-labelledby="about-title" tabindex="-1"><div class="about-copy"><h2 id="about-title">Sobre a prática</h2><p>Esta exposição reúne estudos conceituais sobre luz, matéria e movimento. Cada trabalho parte de uma situação simples: uma superfície, uma dobra ou uma sombra.</p><p>As imagens aproximam detalhes que costumam passar depressa. No vídeo, o tempo entra na composição e transforma o que parecia imóvel.</p></div></section>
+    <main>
+      <section class="hero" id="topo">
+        <div class="hero__centro">
+          <h1 class="hero__marca" aria-label="Pavonia Audiovisual">
+            <span class="logo" aria-hidden="true">
+              <i class="logo__flor"></i>
+              <span class="logo__nome marca"><b class="l1"></b><b class="l2"></b><b class="l3"></b><b class="l4"></b><b class="l5"></b><b class="l6"></b></span>
+              <span class="logo__sub"><span>A</span><span>U</span><span>D</span><span>I</span><span>O</span><span>V</span><span>I</span><span>S</span><span>U</span><span>A</span><span>L</span></span>
+            </span>
+          </h1>
+          <button class="hero__reel mono" type="button" data-abre-reel>
+            <svg class="play" viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0l10 6-10 6z" /></svg>Ver o reel
+          </button>
+        </div>
+        <div class="hero__canto hero__canto--esq">
+          <p class="mono">Produtora audiovisual</p>
+          <p>[o que a Pavonia filma]</p>
+        </div>
+        <div class="hero__canto hero__canto--dir">
+          <p class="mono">Desde [ano]</p>
+          <p>[nº] filmes entregues</p>
+        </div>
+      </section>
 
-    <section class="section closing container" id="contato" aria-labelledby="contact-title"><p class="label">Projetos e colaborações</p><div class="closing-copy"><h2 id="contact-title">Uma conversa começa por uma imagem.</h2><p>Para conversar sobre um projeto, escolha o estudo que mais se aproxima da sua ideia.</p><a class="button button-primary" href="#trabalhos">Explorar trabalhos <span aria-hidden="true">↗</span></a></div></section>
-  </main>
-  <footer class="section footer container" id="rodape"><div class="footer-identity"><a class="wordmark" href="#entrada" aria-label="Pavonia Audiovisual, início"><img class="client-logo" src="./public/assets/pavonia-logo-rosa.png" alt="Pavonia Audiovisual" width="2000" height="1414" loading="lazy"></a><p class="small">Estudos conceituais<br>de imagem e movimento.</p></div><nav aria-label="Navegação do rodapé"><p class="label">Explorar</p><a href="#trabalhos">Trabalhos</a><a href="#video">Vídeo</a><a href="#sobre">Sobre</a></nav><div class="footer-return"><a class="button button-secondary" href="#entrada">Voltar ao início <span aria-hidden="true">↑</span></a></div></footer>
-</body>
+      <div class="folha">
+        <section class="manifesto" id="estudio">
+          <p class="manifesto__texto entra">Do primeiro rascunho ao último corte, cada filme da Pavonia passa pelas mesmas mãos.</p>
+          <div class="manifesto__grade">
+            <div class="nota nota--esq entra" style="--d: .12s">
+              <p class="mono">Direção</p>
+              <p>[quem dirige]</p>
+            </div>
+            <div class="janela furo"></div>
+            <div class="nota nota--dir entra" style="--d: .2s">
+              <p class="mono">Finalização</p>
+              <p>[onde e como finalizam]</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="filmes" id="filmes">
+          <div class="filmes__topo">
+            <h2 class="titulo entra">Filmes<br />recentes</h2>
+            <button class="pilula pilula--contorno entra" type="button" data-abre-reel style="--d: .1s">
+              Ver todos os filmes<svg class="seta" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11.5M9 3.5 13.5 8 9 12.5" /></svg>
+            </button>
+          </div>
+          <div class="filmes__grade">
+            <figure class="filme entra">
+              <div class="filme__quadro">
+                <img src="/img/filme-carro.webp" alt="Carro com faróis acesos sob chuva forte, à noite" width="1024" height="1280" loading="lazy" decoding="async" />
+                <i class="filme__lavado"></i><i class="filme__vinheta"></i><i class="filme__grao"></i>
+              </div>
+              <figcaption><span class="filme__nome">[Cliente do filme 1]</span><span class="mono">[Tipo] · [ano]</span></figcaption>
+            </figure>
+            <div class="furo filmes__furo">
+              <p class="entra" style="--d: .1s">Cada filme começa com uma conversa</p>
+            </div>
+            <figure class="filme entra" style="--d: .2s">
+              <div class="filme__quadro">
+                <img src="/img/filme-clipe.webp" alt="Cantora ao microfone sob luz vermelha" width="1024" height="1280" loading="lazy" decoding="async" />
+                <i class="filme__lavado"></i><i class="filme__vinheta"></i><i class="filme__grao"></i>
+              </div>
+              <figcaption><span class="filme__nome">[Cliente do filme 2]</span><span class="mono">[Tipo] · [ano]</span></figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="processo" id="processo" data-aberta>
+          <div class="processo__conteudo">
+            <div class="entra">
+              <h2 class="titulo">Do roteiro à entrega<br />em três etapas.</h2>
+            </div>
+            <ol class="processo__etapas">
+              <li class="entra"><p class="mono">Pré-produção</p><p>Roteiro, elenco, locação e plano de filmagem, aprovados com você.</p></li>
+              <li class="entra" style="--d: .1s"><p class="mono">Filmagem</p><p>Direção, câmera, luz e som no set.</p></li>
+              <li class="entra" style="--d: .2s"><p class="mono">Pós-produção</p><p>Montagem, cor, trilha e mixagem até a versão final.</p></li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="contato" id="contato">
+          <div class="contato__topo">
+            <h2 class="titulo entra">Tem um filme<br />para fazer?</h2>
+            <div class="contato__dados entra" style="--d: .12s">
+              <!-- trocar pelo e-mail e telefone da Pavonia (mailto: e tel:) -->
+              <a class="link" href="#contato">[e-mail]</a>
+              <a class="link" href="#contato">[telefone]</a>
+              <a class="pilula pilula--cheia" href="#contato">
+                Pedir orçamento<svg class="seta" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h11.5M9 3.5 13.5 8 9 12.5" /></svg>
+              </a>
+            </div>
+          </div>
+          <div class="contato__nome furo">
+            <svg class="contato__svg" viewBox="-46 -34 1576 578" aria-hidden="true" focusable="false">
+              <defs>
+                <mask id="pavonia-vazado" maskUnits="userSpaceOnUse" x="-90" y="-80" width="1664" height="670">
+                  <rect x="-90" y="-80" width="1664" height="670" fill="#fff" />
+                  <image href="/img/marca/nome-preto.png" x="0" y="0" width="1484" height="510" />
+                </mask>
+              </defs>
+              <rect class="contato__osso" x="-90" y="-80" width="1664" height="670" mask="url(#pavonia-vazado)" />
+            </svg>
+          </div>
+          <footer class="rodape mono">
+            <p>© 2026 Pavonia Audiovisual</p>
+            <nav class="rodape__redes" aria-label="Redes">
+              <!-- trocar pelos perfis da Pavonia -->
+              <a class="link" href="#contato">Instagram</a>
+              <a class="link" href="#contato">Vimeo</a>
+              <a class="link" href="#contato">YouTube</a>
+            </nav>
+          </footer>
+        </section>
+      </div>
+    </main>
+
+    <dialog class="reel" data-reel aria-label="Reel da Pavonia Audiovisual">
+      <video class="reel__video" poster="/video/montagem.jpg" muted loop playsinline preload="none"></video>
+      <button class="pilula reel__fecha" type="button" data-fecha-reel>Fechar<span class="x" aria-hidden="true">×</span></button>
+    </dialog>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
